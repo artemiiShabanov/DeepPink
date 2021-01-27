@@ -18,6 +18,13 @@
 		A48841E825C1B7A500346382 /* Color+assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841E725C1B7A500346382 /* Color+assets.swift */; };
 		A48841EC25C1B7C600346382 /* Color+string.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841EB25C1B7C600346382 /* Color+string.swift */; };
 		A48841F225C1B80B00346382 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48841F125C1B80B00346382 /* Launch Screen.storyboard */; };
+		A48841F725C1B98E00346382 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841F625C1B98E00346382 /* MainView.swift */; };
+		A48841FB25C1B9C100346382 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841FA25C1B9C100346382 /* ColorsView.swift */; };
+		A48841FF25C1BB4B00346382 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841FE25C1BB4B00346382 /* AppColor.swift */; };
+		A488420525C1C20200346382 /* ColorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488420425C1C20200346382 /* ColorButtonStyle.swift */; };
+		A488421925C1C95100346382 /* ScaledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488421825C1C95100346382 /* ScaledCircle.swift */; };
+		A488421D25C1C96500346382 /* ClipShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488421C25C1C96500346382 /* ClipShapeModifier.swift */; };
+		A488422025C1C98300346382 /* AnyTransition+iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488421F25C1C98300346382 /* AnyTransition+iris.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		A48841E725C1B7A500346382 /* Color+assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+assets.swift"; sourceTree = "<group>"; };
 		A48841EB25C1B7C600346382 /* Color+string.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+string.swift"; sourceTree = "<group>"; };
 		A48841F125C1B80B00346382 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A48841F625C1B98E00346382 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A48841FA25C1B9C100346382 /* ColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
+		A48841FE25C1BB4B00346382 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		A488420425C1C20200346382 /* ColorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtonStyle.swift; sourceTree = "<group>"; };
+		A488421825C1C95100346382 /* ScaledCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledCircle.swift; sourceTree = "<group>"; };
+		A488421C25C1C96500346382 /* ClipShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipShapeModifier.swift; sourceTree = "<group>"; };
+		A488421F25C1C98300346382 /* AnyTransition+iris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+iris.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,7 @@
 		A48841DB25C1B74F00346382 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A488421725C1C94700346382 /* Shapes */,
 				A48841DE25C1B76000346382 /* Views */,
 				A48841DD25C1B75B00346382 /* Modifiers */,
 				A48841DC25C1B75700346382 /* Styles */,
@@ -110,6 +125,7 @@
 		A48841DC25C1B75700346382 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				A488420425C1C20200346382 /* ColorButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -117,6 +133,7 @@
 		A48841DD25C1B75B00346382 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				A488421C25C1C96500346382 /* ClipShapeModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -142,6 +159,7 @@
 			children = (
 				A48841E725C1B7A500346382 /* Color+assets.swift */,
 				A48841EB25C1B7C600346382 /* Color+string.swift */,
+				A488421F25C1C98300346382 /* AnyTransition+iris.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +167,7 @@
 		A48841EE25C1B7EF00346382 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A48841FE25C1BB4B00346382 /* AppColor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,6 +175,7 @@
 		A48841EF25C1B7F600346382 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A48841F525C1B98100346382 /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -168,6 +188,31 @@
 				A48841F125C1B80B00346382 /* Launch Screen.storyboard */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		A48841F525C1B98100346382 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A48841F925C1B9B600346382 /* Subviews */,
+				A48841F625C1B98E00346382 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A48841F925C1B9B600346382 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A48841FA25C1B9C100346382 /* ColorsView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		A488421725C1C94700346382 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				A488421825C1C95100346382 /* ScaledCircle.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,12 +287,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A488421925C1C95100346382 /* ScaledCircle.swift in Sources */,
+				A48841FB25C1B9C100346382 /* ColorsView.swift in Sources */,
+				A488422025C1C98300346382 /* AnyTransition+iris.swift in Sources */,
+				A488420525C1C20200346382 /* ColorButtonStyle.swift in Sources */,
 				A48841C725C1B71400346382 /* ContentView.swift in Sources */,
+				A48841F725C1B98E00346382 /* MainView.swift in Sources */,
 				A48841E425C1B78000346382 /* GenericClosure.swift in Sources */,
+				A488421D25C1C96500346382 /* ClipShapeModifier.swift in Sources */,
 				A48841EC25C1B7C600346382 /* Color+string.swift in Sources */,
 				A48841E825C1B7A500346382 /* Color+assets.swift in Sources */,
 				A48841C525C1B71400346382 /* DeepPinkApp.swift in Sources */,
 				A48841E125C1B77200346382 /* Feedback.swift in Sources */,
+				A48841FF25C1BB4B00346382 /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

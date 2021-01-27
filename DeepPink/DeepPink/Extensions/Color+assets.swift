@@ -8,5 +8,10 @@
 import SwiftUI
 
 extension Color {
-    static let illuminating = Color("illuminating")
+
+    static let deeppink = Color("deeppink")
+    static let ashgrey = Color("ashgrey")
+    static let unmellow = Color("unmellow")
+    static let lime = Color("lime")
+
 }
