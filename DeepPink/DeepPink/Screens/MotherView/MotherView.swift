@@ -16,7 +16,7 @@ struct MotherView: View {
             case .main:
                 MainView()
             case .camera:
-                MainView()
+                CameraView()
                     .transition(.iris)
         }
     }

@@ -39,6 +39,9 @@ struct MainView: View {
             }
             Button("") {
                 Feedback.haptic(.heavy)
+                withAnimation {
+                    viewRouter.currentPage = .camera
+                }
             }
             .animation(.spring())
             .buttonStyle(OpenCameraButtonStyle(color: currentColor.color))

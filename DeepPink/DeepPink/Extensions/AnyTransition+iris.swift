@@ -11,7 +11,7 @@ extension AnyTransition {
     static var iris: AnyTransition {
         .modifier(
             active: ClipShapeModifier(shape: ScaledCircle(animatableData: 0)),
-            identity: ClipShapeModifier(shape: ScaledCircle(animatableData: 1))
+            identity: ClipShapeModifier(shape: ScaledCircle(animatableData: 1.5))
         )
     }
 }
