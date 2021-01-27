@@ -17,22 +17,22 @@ struct ColorsView: View {
     // MARK: - View
 
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 20) {
+//        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 30) {
                 Spacer(minLength: 20)
                 ForEach(colors) { color in
                     Button("") {
-                        Feedback.haptic(.heavy)
+                        Feedback.haptic(.light)
                         currentColor = color
                     }
-                    .frame(width: 50, height: 50)
-                    .animation(.easeInOut)
+                    .frame(width: 40, height: 40)
+                    .animation(.spring())
                     .buttonStyle(ColorButtonStyle(color: color.color))
                 }
                 Spacer(minLength: 20)
             }
-            .frame(height: 100, alignment: .center)
-        }
+            .frame(height: 60, alignment: .center)
+//        }
     }
 }
 

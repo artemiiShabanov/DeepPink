@@ -38,7 +38,7 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
     var name: String {
         switch self {
         case .deeppink:
-            return "depppink"
+            return "deeppink"
         case .ashgrey:
             return "ashgrey"
         case .unmellow:
@@ -48,16 +48,16 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
         }
     }
 
-    var font: Font {
+    func font(size: CGFloat) -> Font {
         switch self {
         case .deeppink:
-            return Font.system(.body)
+            return Font.custom("deep", size: size)
         case .ashgrey:
-            return Font.system(.body)
+            return Font.custom("deep", size: size)
         case .unmellow:
-            return Font.system(.body)
+            return Font.custom("deep", size: size)
         case .lime:
-            return Font.system(.body)
+            return Font.custom("deep", size: size)
         }
     }
 

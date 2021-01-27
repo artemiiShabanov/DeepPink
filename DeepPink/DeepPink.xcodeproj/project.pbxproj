@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A406A64125C1E34A00D50E27 /* deep.otf in Resources */ = {isa = PBXBuildFile; fileRef = A406A64025C1E34A00D50E27 /* deep.otf */; };
 		A48841C525C1B71400346382 /* DeepPinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841C425C1B71400346382 /* DeepPinkApp.swift */; };
-		A48841C725C1B71400346382 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841C625C1B71400346382 /* ContentView.swift */; };
 		A48841C925C1B71600346382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841C825C1B71600346382 /* Assets.xcassets */; };
 		A48841CC25C1B71600346382 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841CB25C1B71600346382 /* Preview Assets.xcassets */; };
 		A48841D625C1B73800346382 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841D525C1B73800346382 /* Colors.xcassets */; };
@@ -25,12 +25,17 @@
 		A488421925C1C95100346382 /* ScaledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488421825C1C95100346382 /* ScaledCircle.swift */; };
 		A488421D25C1C96500346382 /* ClipShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488421C25C1C96500346382 /* ClipShapeModifier.swift */; };
 		A488422025C1C98300346382 /* AnyTransition+iris.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488421F25C1C98300346382 /* AnyTransition+iris.swift */; };
+		A488422625C1CB8300346382 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488422525C1CB8300346382 /* MotherView.swift */; };
+		A488422A25C1CBC300346382 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488422925C1CBC300346382 /* ViewRouter.swift */; };
+		A4C849A625C1CE3C00524790 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C849A525C1CE3C00524790 /* CameraView.swift */; };
+		A4C849A925C1CEB700524790 /* OpenCameraButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C849A825C1CEB700524790 /* OpenCameraButtonStyle.swift */; };
+		A4E8B4B125C1DFB0003971BC /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E8B4B025C1DFB0003971BC /* SafeArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A406A64025C1E34A00D50E27 /* deep.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = deep.otf; sourceTree = "<group>"; };
 		A48841C125C1B71400346382 /* DeepPink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepPink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48841C425C1B71400346382 /* DeepPinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepPinkApp.swift; sourceTree = "<group>"; };
-		A48841C625C1B71400346382 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A48841C825C1B71600346382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A48841CB25C1B71600346382 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A48841CD25C1B71600346382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +53,11 @@
 		A488421825C1C95100346382 /* ScaledCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledCircle.swift; sourceTree = "<group>"; };
 		A488421C25C1C96500346382 /* ClipShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipShapeModifier.swift; sourceTree = "<group>"; };
 		A488421F25C1C98300346382 /* AnyTransition+iris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+iris.swift"; sourceTree = "<group>"; };
+		A488422525C1CB8300346382 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		A488422925C1CBC300346382 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		A4C849A525C1CE3C00524790 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		A4C849A825C1CEB700524790 /* OpenCameraButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCameraButtonStyle.swift; sourceTree = "<group>"; };
+		A4E8B4B025C1DFB0003971BC /* SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,7 @@
 		A48841D425C1B72900346382 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A4E8B4C925C1E273003971BC /* Fonts */,
 				A48841C825C1B71600346382 /* Assets.xcassets */,
 				A48841D525C1B73800346382 /* Colors.xcassets */,
 				A48841D825C1B74100346382 /* Images.xcassets */,
@@ -126,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A488420425C1C20200346382 /* ColorButtonStyle.swift */,
+				A4C849A825C1CEB700524790 /* OpenCameraButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -150,6 +162,7 @@
 			children = (
 				A48841E025C1B77200346382 /* Feedback.swift */,
 				A48841E325C1B78000346382 /* GenericClosure.swift */,
+				A4E8B4B025C1DFB0003971BC /* SafeArea.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -175,7 +188,9 @@
 		A48841EF25C1B7F600346382 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A488422425C1CB6600346382 /* MotherView */,
 				A48841F525C1B98100346382 /* Main */,
+				A4C849A425C1CE2A00524790 /* Camera */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -183,7 +198,6 @@
 		A48841F025C1B7FD00346382 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A48841C625C1B71400346382 /* ContentView.swift */,
 				A48841C425C1B71400346382 /* DeepPinkApp.swift */,
 				A48841F125C1B80B00346382 /* Launch Screen.storyboard */,
 			);
@@ -213,6 +227,31 @@
 				A488421825C1C95100346382 /* ScaledCircle.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		A488422425C1CB6600346382 /* MotherView */ = {
+			isa = PBXGroup;
+			children = (
+				A488422925C1CBC300346382 /* ViewRouter.swift */,
+				A488422525C1CB8300346382 /* MotherView.swift */,
+			);
+			path = MotherView;
+			sourceTree = "<group>";
+		};
+		A4C849A425C1CE2A00524790 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				A4C849A525C1CE3C00524790 /* CameraView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		A4E8B4C925C1E273003971BC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A406A64025C1E34A00D50E27 /* deep.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +315,7 @@
 				A48841D925C1B74100346382 /* Images.xcassets in Resources */,
 				A48841CC25C1B71600346382 /* Preview Assets.xcassets in Resources */,
 				A48841F225C1B80B00346382 /* Launch Screen.storyboard in Resources */,
+				A406A64125C1E34A00D50E27 /* deep.otf in Resources */,
 				A48841C925C1B71600346382 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,11 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A488422A25C1CBC300346382 /* ViewRouter.swift in Sources */,
 				A488421925C1C95100346382 /* ScaledCircle.swift in Sources */,
+				A488422625C1CB8300346382 /* MotherView.swift in Sources */,
+				A4C849A625C1CE3C00524790 /* CameraView.swift in Sources */,
 				A48841FB25C1B9C100346382 /* ColorsView.swift in Sources */,
 				A488422025C1C98300346382 /* AnyTransition+iris.swift in Sources */,
 				A488420525C1C20200346382 /* ColorButtonStyle.swift in Sources */,
-				A48841C725C1B71400346382 /* ContentView.swift in Sources */,
+				A4E8B4B125C1DFB0003971BC /* SafeArea.swift in Sources */,
 				A48841F725C1B98E00346382 /* MainView.swift in Sources */,
 				A48841E425C1B78000346382 /* GenericClosure.swift in Sources */,
 				A488421D25C1C96500346382 /* ClipShapeModifier.swift in Sources */,
@@ -299,6 +342,7 @@
 				A48841E825C1B7A500346382 /* Color+assets.swift in Sources */,
 				A48841C525C1B71400346382 /* DeepPinkApp.swift in Sources */,
 				A48841E125C1B77200346382 /* Feedback.swift in Sources */,
+				A4C849A925C1CEB700524790 /* OpenCameraButtonStyle.swift in Sources */,
 				A48841FF25C1BB4B00346382 /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

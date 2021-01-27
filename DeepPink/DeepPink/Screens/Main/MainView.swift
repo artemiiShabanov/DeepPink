@@ -9,33 +9,43 @@ import SwiftUI
 
 struct MainView: View {
 
+    // MARK: - EnvironmentObject
+
+    @EnvironmentObject var viewRouter: ViewRouter
+
     // MARK: - AppStorage
 
     @AppStorage("currentColor") var currentColor = AppColor.deeppink
-    @State private var isShowingRed = false
+
     // MARK: - View
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Rectangle()
-                    .fill(Color.blue)
-                    .frame(width: 300, height: 300)
-
-                if isShowingRed {
-                    Rectangle()
-                        .fill(Color.red)
-                        .frame(width: 300, height: 300)
-                        .transition(.iris)
-                        .zIndex(1)
+        ZStack {
+            VStack(spacing: nil) {
+                HStack {
+                    Text(currentColor.name)
+                        .font(currentColor.font(size: 35))
+                        .foregroundColor(currentColor.color)
+                        .rotationEffect(.init(degrees: 180), anchor: .center)
+                        .rotationEffect(.init(degrees: 90), anchor: .leading)
+                        .padding(.horizontal, 50)
+                        .animation(.spring())
+                    Spacer()
                 }
+                Spacer()
+                ColorsView(colors: AppColor.allCases, currentColor: $currentColor)
+                    .opacity(0.6)
+                    .padding(.bottom, SafeArea.shared.bottom + 10)
             }
-            .navigationBarItems(trailing: Button("Switch") {
-                withAnimation(.easeInOut) {
-                    self.isShowingRed.toggle()
-                }
-            })
+            Button("") {
+                Feedback.haptic(.heavy)
+            }
+            .animation(.spring())
+            .buttonStyle(OpenCameraButtonStyle(color: currentColor.color))
+            .frame(width: 150, height: 150)
         }
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
