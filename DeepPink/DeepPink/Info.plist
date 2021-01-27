@@ -58,5 +58,7 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>I needs camera access to take pictures</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>I need save to photo library access to save pictures</string>
 </dict>
 </plist>
