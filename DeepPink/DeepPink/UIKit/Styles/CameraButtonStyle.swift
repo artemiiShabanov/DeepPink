@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-struct OpenCameraButtonStyle: ButtonStyle {
+struct CameraButtonStyle: ButtonStyle {
+
+    // MARK: - Properties
 
     let color: Color
+
+    // MARK: - ButtonStyle
 
     private var overlay: some View {
         Circle()
@@ -28,7 +32,7 @@ struct OpenCameraButtonStyle: ButtonStyle {
                         .rotationEffect(configuration.isPressed ? Angle(degrees: 180) : .zero)
                 )
             Image(systemName: "camera.fill")
-                .scaleEffect(2)
+                .font(.largeTitle)
                 .foregroundColor(.black)
         }
         .scaleEffect(configuration.isPressed ? 1.2 : 1.0)

@@ -44,7 +44,7 @@ struct MainView: View {
                 }
             }
             .animation(.spring())
-            .buttonStyle(OpenCameraButtonStyle(color: currentColor.color))
+            .buttonStyle(CameraButtonStyle(color: currentColor.color))
             .frame(width: 150, height: 150)
         }
         .background(Color.black)

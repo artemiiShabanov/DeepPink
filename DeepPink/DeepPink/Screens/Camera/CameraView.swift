@@ -38,20 +38,43 @@ struct CameraView: View {
         }
     }
 
+    var bottomView: some View {
+        VStack {
+            Spacer()
+            ZStack {
+                Button("") {
+
+                }
+                .buttonStyle(TakePictureButtonStyle(color: currentColor.color))
+                .frame(width: 80, height: 80)
+
+                HStack {
+                    Spacer()
+                    Button("close") {
+                        withAnimation {
+                            viewRouter.currentPage = .main
+                        }
+                    }
+                    .buttonStyle(CloseButtonStyle(color: currentColor.color))
+                    .frame(width: 60, height: 60)
+                    .padding(.horizontal, 25)
+                }
+            }
+            .padding(.bottom, SafeArea.shared.bottom + 10)
+        }
+    }
+
     var body: some View {
         ZStack(alignment: .bottom) {
             if shown {
                 CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture)
-                CaptureButtonView().onTapGesture {
-                    withAnimation {
-                        viewRouter.currentPage = .main
-                    }
-                }
+                bottomView
             } else {
                 placeholder
             }
         }
-        .background(Color.red)
+        .background(Color.blue)
+        .edgesIgnoringSafeArea(.all)
         .onAppear {
             appeared = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
@@ -63,7 +86,6 @@ struct CameraView: View {
     }
 
 }
-
 
 struct CustomCameraRepresentable: UIViewControllerRepresentable {
 
@@ -94,13 +116,11 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
         }
 
         func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-
             parent.didTapCapture = false
 
             if let imageData = photo.fileDataRepresentation() {
                 parent.image = UIImage(data: imageData)
             }
-            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }
@@ -186,29 +206,5 @@ class CustomCameraController: UIViewController {
     }
     func startRunningCaptureSession(){
         captureSession.startRunning()
-    }
-}
-
-
-struct CaptureButtonView: View {
-    @State private var animationAmount: CGFloat = 1
-    var body: some View {
-        Image(systemName: "video").font(.largeTitle)
-            .padding(30)
-            .background(Color.red)
-            .foregroundColor(.white)
-            .clipShape(Circle())
-            .overlay(
-                Circle()
-                    .stroke(Color.red)
-                    .scaleEffect(animationAmount)
-                    .opacity(Double(2 - animationAmount))
-                    .animation(Animation.easeOut(duration: 1)
-                        .repeatForever(autoreverses: false))
-        )
-            .onAppear
-            {
-                self.animationAmount = 2
-        }
     }
 }
