@@ -19,7 +19,6 @@ struct CameraView: View {
 
     // MARK: - Properties
 
-    @State var image: UIImage? = nil
     @State var didTapCapture: Bool = false
     @State var appeared: Bool = false
     @State var shown: Bool = false
@@ -66,17 +65,17 @@ struct CameraView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if shown {
-                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture)
+                CustomCameraRepresentable(didTapCapture: $didTapCapture)
                 bottomView
             } else {
                 placeholder
             }
         }
-        .background(Color.blue)
+        .background(Color.black)
         .edgesIgnoringSafeArea(.all)
         .onAppear {
             appeared = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 withAnimation(.easeOut(duration: 1)) {
                     shown = true
                 }

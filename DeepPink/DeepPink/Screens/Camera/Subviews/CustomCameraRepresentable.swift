@@ -10,10 +10,18 @@ import AVFoundation
 
 struct CustomCameraRepresentable: UIViewControllerRepresentable {
 
+    // MARK: - Binding
+
+    @Binding var didTapCapture: Bool
+
     // MARK: - Properties
 
-    @Binding var image: UIImage?
-    @Binding var didTapCapture: Bool
+    private let imageSaver: ImageSaver = {
+        let tmp = ImageSaver()
+        tmp.onError = { _ in }
+        tmp.onSuccess = { }
+        return tmp
+    }()
 
     // MARK: - UIViewControllerRepresentable
 
@@ -42,11 +50,20 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
 
         func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
             parent.didTapCapture = false
-
-            if let imageData = photo.fileDataRepresentation() {
-                parent.image = UIImage(data: imageData)
+            if let imageData = photo.fileDataRepresentation(), let image = UIImage(data: imageData) {
+                parent.saveImage(image)
             }
         }
+    }
+
+}
+
+// MARK: - Private Methods
+
+private extension CustomCameraRepresentable {
+
+    func saveImage(_ image: UIImage) {
+        imageSaver.save(image: image)
     }
 
 }

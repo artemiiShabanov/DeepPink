@@ -13,6 +13,8 @@
 		A413393D25C20D78000B16E5 /* CustomCameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413393C25C20D78000B16E5 /* CustomCameraRepresentable.swift */; };
 		A413394025C20D9D000B16E5 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413393F25C20D9D000B16E5 /* CustomCameraController.swift */; };
 		A413394325C2122D000B16E5 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413394225C2122D000B16E5 /* ImageSaver.swift */; };
+		A44B5E8925C2CE5B00E42579 /* TextToImageDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5E8825C2CE5B00E42579 /* TextToImageDrawer.swift */; };
+		A44B5E8C25C2D87E00E42579 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5E8B25C2D87E00E42579 /* ImageFilter.swift */; };
 		A48841C525C1B71400346382 /* DeepPinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841C425C1B71400346382 /* DeepPinkApp.swift */; };
 		A48841C925C1B71600346382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841C825C1B71600346382 /* Assets.xcassets */; };
 		A48841CC25C1B71600346382 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841CB25C1B71600346382 /* Preview Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		A413393C25C20D78000B16E5 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
 		A413393F25C20D9D000B16E5 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		A413394225C2122D000B16E5 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		A44B5E8825C2CE5B00E42579 /* TextToImageDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToImageDrawer.swift; sourceTree = "<group>"; };
+		A44B5E8B25C2D87E00E42579 /* ImageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
 		A48841C125C1B71400346382 /* DeepPink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepPink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48841C425C1B71400346382 /* DeepPinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepPinkApp.swift; sourceTree = "<group>"; };
 		A48841C825C1B71600346382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +92,16 @@
 				A413393F25C20D9D000B16E5 /* CustomCameraController.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		A44B5E8E25C2D88100E42579 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A44B5E8825C2CE5B00E42579 /* TextToImageDrawer.swift */,
+				A413394225C2122D000B16E5 /* ImageSaver.swift */,
+				A44B5E8B25C2D87E00E42579 /* ImageFilter.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		A48841B825C1B71400346382 = {
@@ -181,10 +195,10 @@
 		A48841DF25C1B76500346382 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A44B5E8E25C2D88100E42579 /* Image */,
 				A48841E025C1B77200346382 /* Feedback.swift */,
 				A48841E325C1B78000346382 /* GenericClosure.swift */,
 				A4E8B4B025C1DFB0003971BC /* SafeArea.swift */,
-				A413394225C2122D000B16E5 /* ImageSaver.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -367,9 +381,11 @@
 				A488421D25C1C96500346382 /* ClipShapeModifier.swift in Sources */,
 				A48841EC25C1B7C600346382 /* Color+string.swift in Sources */,
 				A48841E825C1B7A500346382 /* Color+assets.swift in Sources */,
+				A44B5E8925C2CE5B00E42579 /* TextToImageDrawer.swift in Sources */,
 				A48841C525C1B71400346382 /* DeepPinkApp.swift in Sources */,
 				A48841E125C1B77200346382 /* Feedback.swift in Sources */,
 				A4C849A925C1CEB700524790 /* CameraButtonStyle.swift in Sources */,
+				A44B5E8C25C2D87E00E42579 /* ImageFilter.swift in Sources */,
 				A48841FF25C1BB4B00346382 /* AppColor.swift in Sources */,
 				A413394025C20D9D000B16E5 /* CustomCameraController.swift in Sources */,
 			);
