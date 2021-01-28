@@ -7,4 +7,8 @@
 
 import Foundation
 
-struct ImageSv
+class ImageSaver {
+
+    
+
+}
