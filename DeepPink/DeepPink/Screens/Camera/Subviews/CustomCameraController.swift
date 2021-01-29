@@ -21,17 +21,30 @@ class CustomCameraController: UIViewController {
     var photoOutput = AVCapturePhotoOutput()
     var orientation: AVCaptureVideoOrientation = .portrait
 
-    // CI
-    let context = CIContext()
-    var filteredImage = UIImageView()
-
     var delegate: AVCapturePhotoCaptureDelegate?
+
+    // CI
+    let filter: CIFilter
+
+    // UI
+    var filteredImageView = UIImageView()
 
     // MARK: - Methods
 
     func didTapRecord() {
         let settings = AVCapturePhotoSettings()
         photoOutput.capturePhoto(with: settings, delegate: delegate!)
+    }
+
+    // Init
+
+    init(filter: CIFilter) {
+        self.filter = filter
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - UIViewController
@@ -103,10 +116,8 @@ private extension CustomCameraController {
 
     func setupCorrectFramerate(currentCamera: AVCaptureDevice) {
         for vFormat in currentCamera.formats {
-            //see available types
-            //print("\(vFormat) \n")
 
-            var ranges = vFormat.videoSupportedFrameRateRanges as [AVFrameRateRange]
+            let ranges = vFormat.videoSupportedFrameRateRanges as [AVFrameRateRange]
             let frameRates = ranges[0]
 
             do {
@@ -128,14 +139,9 @@ private extension CustomCameraController {
     }
 
     func setupPreviewLayer() {
-        filteredImage.frame = self.view.frame
-        filteredImage.contentMode = .scaleAspectFit
-        self.view.addSubview(filteredImage)
-//        self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-//        self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-//        self.cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-//        self.cameraPreviewLayer?.frame = self.view.frame
-//        self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
+        filteredImageView.frame = self.view.frame
+        filteredImageView.contentMode = .scaleAspectFit
+        self.view.addSubview(filteredImageView)
     }
 
     func startRunningCaptureSession() {
@@ -150,21 +156,12 @@ extension CustomCameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
 
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         connection.videoOrientation = orientation
-        let videoOutput = AVCaptureVideoDataOutput()
-        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue.main)
-
-        let comicEffect = CIFilter(name: "CIComicEffect")
 
         let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
         let cameraImage = CIImage(cvImageBuffer: pixelBuffer!)
 
-        comicEffect!.setValue(cameraImage, forKey: kCIInputImageKey)
-
-        let cgImage = self.context.createCGImage(comicEffect!.outputImage!, from: cameraImage.extent)!
-
         DispatchQueue.main.async {
-            let filteredImage = UIImage(cgImage: cgImage)
-            self.filteredImage.image = filteredImage
+            self.filteredImageView.image = FilterApplyer.shared.apply(self.filter, to: cameraImage)
         }
     }
 

@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct CloseButtonStyle: ButtonStyle {
+struct RoundButtonStyle: ButtonStyle {
 
     // MARK: - Properties
 
     let color: Color
+    let imageName: String
 
     // MARK: - ButtonStyle
 
@@ -19,7 +20,9 @@ struct CloseButtonStyle: ButtonStyle {
         ZStack {
             Circle()
                 .foregroundColor(.white).opacity(0.6)
-            Image(systemName: "arrow.down.right.and.arrow.up.left").font(.title2).foregroundColor(color)
-        }.scaleEffect(configuration.isPressed ? 1.05 : 1)
+            Image(systemName: imageName).font(.title2).foregroundColor(color)
+        }
+        .scaleEffect(configuration.isPressed ? 1.05 : 1)
+        .opacity(configuration.isPressed ? 0.8 : 1)
     }
 }

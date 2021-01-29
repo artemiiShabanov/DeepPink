@@ -32,6 +32,20 @@ struct MainView: View {
     @State private var alert: AlertType?
 
     // MARK: - View
+
+    var takePermissionDeniedAlert: Alert = {
+        return Alert(title: Text("I need access to take pictures. You can give it in app settings"),
+                     primaryButton: Alert.Button.default(Text("Settings"),
+                                                         action: { SystemSegues.appSettings.open() }),
+                     secondaryButton: Alert.Button.cancel())
+    }()
+
+    var savePermissionDeniedAlert: Alert = {
+        return Alert(title: Text("I need access to save pictures to your library. You can give it in app settings"),
+                     primaryButton: Alert.Button.default(Text("Settings"),
+                                                         action: { SystemSegues.appSettings.open() }),
+                     secondaryButton: Alert.Button.cancel())
+    }()
     
     var body: some View {
         ZStack {
@@ -77,9 +91,9 @@ struct MainView: View {
         .alert(item: $alert) {
             switch $0 {
             case .takePermissionDenied:
-                return Alert(title: Text("I need access to take pictures. You can give it in app settings"))
+                return takePermissionDeniedAlert
             case .savePermissionDenied:
-                return Alert(title: Text("I need access to save pictures to your library. You can give it in app settings"))
+                return savePermissionDeniedAlert
             }
         }
     }

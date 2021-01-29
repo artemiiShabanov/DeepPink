@@ -48,14 +48,24 @@ struct CameraView: View {
 
                 HStack {
                     Spacer()
-                    Button("close") {
+                    Button("") {
                         withAnimation {
                             viewRouter.currentPage = .main
                         }
                     }
-                    .buttonStyle(CloseButtonStyle(color: currentColor.color))
+                    .buttonStyle(RoundButtonStyle(color: currentColor.color, imageName: "arrow.down.right.and.arrow.up.left"))
                     .frame(width: 60, height: 60)
                     .padding(.horizontal, 25)
+                }
+
+                HStack {
+                    Button("") {
+                        SystemSegues.gallery.open()
+                    }
+                    .buttonStyle(RoundButtonStyle(color: currentColor.color, imageName: "photo.on.rectangle"))
+                    .frame(width: 60, height: 60)
+                    .padding(.horizontal, 25)
+                    Spacer()
                 }
             }
             .padding(.bottom, SafeArea.shared.bottom + 10)
@@ -65,7 +75,7 @@ struct CameraView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if shown {
-                CustomCameraRepresentable(didTapCapture: $didTapCapture)
+                CustomCameraRepresentable(didTapCapture: $didTapCapture, filter: FilterFactory.getFilter(for: currentColor))
                 bottomView
             } else {
                 placeholder
