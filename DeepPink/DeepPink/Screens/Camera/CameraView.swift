@@ -75,7 +75,7 @@ struct CameraView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if shown {
-                CustomCameraRepresentable(didTapCapture: $didTapCapture, filter: FilterFactory.getFilter(for: currentColor))
+                CustomCameraRepresentable(didTapCapture: $didTapCapture, appColor: currentColor)
                 bottomView
             } else {
                 placeholder

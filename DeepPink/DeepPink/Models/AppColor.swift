@@ -48,6 +48,19 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
         }
     }
 
+    func uiFont(size: CGFloat) -> UIFont {
+        switch self {
+        case .deeppink:
+            return UIFont.systemFont(ofSize: size)
+        case .ashgrey:
+            return UIFont.systemFont(ofSize: size)
+        case .unmellow:
+            return UIFont.systemFont(ofSize: size)
+        case .lime:
+            return UIFont.systemFont(ofSize: size)
+        }
+    }
+
     func font(size: CGFloat) -> Font {
         switch self {
         case .deeppink:

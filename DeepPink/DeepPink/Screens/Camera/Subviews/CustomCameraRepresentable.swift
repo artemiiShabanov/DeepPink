@@ -16,7 +16,7 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
 
     // MARK: - Properties
 
-    let filter: CIFilter
+    let appColor: AppColor
     private let imageSaver: ImageSaver = {
         let tmp = ImageSaver()
         tmp.onError = { _ in Feedback.haptic(.rigid) }
@@ -27,7 +27,7 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     // MARK: - UIViewControllerRepresentable
 
     func makeUIViewController(context: Context) -> CustomCameraController {
-        let controller = CustomCameraController(filter: filter)
+        let controller = CustomCameraController(appColor: appColor)
         controller.delegate = context.coordinator
         return controller
     }
@@ -64,7 +64,7 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
 private extension CustomCameraRepresentable {
 
     func saveImage(_ image: UIImage) {
-        if let filteredImage = FilterApplyer.shared.apply(filter, to: image) {
+        if let filteredImage = FilterApplyer.shared.apply(appColor, to: image, addLabel: true) {
             imageSaver.save(image: filteredImage)
         }
     }
