@@ -13,11 +13,14 @@
 		A413393D25C20D78000B16E5 /* CustomCameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413393C25C20D78000B16E5 /* CustomCameraRepresentable.swift */; };
 		A413394025C20D9D000B16E5 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413393F25C20D9D000B16E5 /* CustomCameraController.swift */; };
 		A413394325C2122D000B16E5 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413394225C2122D000B16E5 /* ImageSaver.swift */; };
+		A41CB40B25C4847C004ABFBA /* 3602-chonk-app.otf in Resources */ = {isa = PBXBuildFile; fileRef = A41CB40A25C4847C004ABFBA /* 3602-chonk-app.otf */; };
+		A41CB40E25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A41CB40D25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf */; };
+		A41CB41125C48B55004ABFBA /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41CB41025C48B55004ABFBA /* UIImage.swift */; };
+		A41CB41525C493FF004ABFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41CB41425C493FF004ABFBA /* Assets.xcassets */; };
 		A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */; };
 		A478893E25C3ED310095578C /* SystemSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478893D25C3ED310095578C /* SystemSegues.swift */; };
 		A478894C25C3F8A60095578C /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478894B25C3F8A60095578C /* FilterFactory.swift */; };
 		A48841C525C1B71400346382 /* DeepPinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48841C425C1B71400346382 /* DeepPinkApp.swift */; };
-		A48841C925C1B71600346382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841C825C1B71600346382 /* Assets.xcassets */; };
 		A48841CC25C1B71600346382 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841CB25C1B71600346382 /* Preview Assets.xcassets */; };
 		A48841D625C1B73800346382 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841D525C1B73800346382 /* Colors.xcassets */; };
 		A48841D925C1B74100346382 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48841D825C1B74100346382 /* Images.xcassets */; };
@@ -47,12 +50,15 @@
 		A413393C25C20D78000B16E5 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
 		A413393F25C20D9D000B16E5 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		A413394225C2122D000B16E5 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		A41CB40A25C4847C004ABFBA /* 3602-chonk-app.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3602-chonk-app.otf"; sourceTree = "<group>"; };
+		A41CB40D25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PolandCannedIntoFuture-OxE3.ttf"; sourceTree = "<group>"; };
+		A41CB41025C48B55004ABFBA /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		A41CB41425C493FF004ABFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterApplyer.swift; sourceTree = "<group>"; };
 		A478893D25C3ED310095578C /* SystemSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSegues.swift; sourceTree = "<group>"; };
 		A478894B25C3F8A60095578C /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; };
 		A48841C125C1B71400346382 /* DeepPink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepPink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48841C425C1B71400346382 /* DeepPinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepPinkApp.swift; sourceTree = "<group>"; };
-		A48841C825C1B71600346382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A48841CB25C1B71600346382 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A48841CD25C1B71600346382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A48841D525C1B73800346382 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -150,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				A4E8B4C925C1E273003971BC /* Fonts */,
-				A48841C825C1B71600346382 /* Assets.xcassets */,
+				A41CB41425C493FF004ABFBA /* Assets.xcassets */,
 				A48841D525C1B73800346382 /* Colors.xcassets */,
 				A48841D825C1B74100346382 /* Images.xcassets */,
 			);
@@ -212,6 +218,7 @@
 				A48841E725C1B7A500346382 /* Color+assets.swift */,
 				A48841EB25C1B7C600346382 /* Color+string.swift */,
 				A488421F25C1C98300346382 /* AnyTransition+iris.swift */,
+				A41CB41025C48B55004ABFBA /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +296,8 @@
 		A4E8B4C925C1E273003971BC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A41CB40A25C4847C004ABFBA /* 3602-chonk-app.otf */,
+				A41CB40D25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf */,
 				A406A64025C1E34A00D50E27 /* deep.otf */,
 			);
 			path = Fonts;
@@ -354,9 +363,11 @@
 				A48841D625C1B73800346382 /* Colors.xcassets in Resources */,
 				A48841D925C1B74100346382 /* Images.xcassets in Resources */,
 				A48841CC25C1B71600346382 /* Preview Assets.xcassets in Resources */,
+				A41CB40E25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf in Resources */,
 				A48841F225C1B80B00346382 /* Launch Screen.storyboard in Resources */,
 				A406A64125C1E34A00D50E27 /* deep.otf in Resources */,
-				A48841C925C1B71600346382 /* Assets.xcassets in Resources */,
+				A41CB41525C493FF004ABFBA /* Assets.xcassets in Resources */,
+				A41CB40B25C4847C004ABFBA /* 3602-chonk-app.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +389,7 @@
 				A413393A25C207A8000B16E5 /* RoundButtonStyle.swift in Sources */,
 				A488420525C1C20200346382 /* ColorButtonStyle.swift in Sources */,
 				A4E8B4B125C1DFB0003971BC /* SafeArea.swift in Sources */,
+				A41CB41125C48B55004ABFBA /* UIImage.swift in Sources */,
 				A48841F725C1B98E00346382 /* MainView.swift in Sources */,
 				A413393725C20663000B16E5 /* TakePictureButtonStyle.swift in Sources */,
 				A48841E425C1B78000346382 /* GenericClosure.swift in Sources */,

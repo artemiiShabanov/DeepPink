@@ -51,7 +51,11 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
     func uiFont(size: CGFloat) -> UIFont {
         switch self {
         case .deeppink:
-            return UIFont.systemFont(ofSize: size)
+            for family in UIFont.familyNames.sorted() {
+                let names = UIFont.fontNames(forFamilyName: family)
+                print("Family: \(family) Font names: \(names)")
+            }
+            return UIFont(name: "PolandcannedintoFuture", size: size) ?? UIFont.systemFont(ofSize: size)
         case .ashgrey:
             return UIFont.systemFont(ofSize: size)
         case .unmellow:

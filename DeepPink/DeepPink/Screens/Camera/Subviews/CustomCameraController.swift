@@ -28,6 +28,8 @@ class CustomCameraController: UIViewController {
 
     // UI
     var filteredImageView = UIImageView()
+    var overlay = UIImageView()
+    private var counter = 0
 
     // MARK: - Methods
 
@@ -142,6 +144,9 @@ private extension CustomCameraController {
         filteredImageView.frame = self.view.frame
         filteredImageView.contentMode = .scaleAspectFit
         self.view.addSubview(filteredImageView)
+        overlay.frame = self.view.frame
+        overlay.contentMode = .scaleAspectFit
+        self.view.addSubview(overlay)
     }
 
     func startRunningCaptureSession() {
@@ -162,6 +167,12 @@ extension CustomCameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
 
         DispatchQueue.main.async {
             self.filteredImageView.image = FilterApplyer.shared.apply(self.appColor, to: cameraImage)
+            guard self.counter < 6 else { return }
+            self.counter += 1
+            if self.counter > 5  {
+                let emptyImage = FilterApplyer.shared.emptyImage(self.appColor, to: cameraImage)
+                self.overlay.image = emptyImage
+            }
         }
     }
 

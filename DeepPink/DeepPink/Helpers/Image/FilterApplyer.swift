@@ -40,7 +40,7 @@ struct FilterApplyer {
         return addLabel ? TextToImageDrawer.addLabel(appColor: appColor, inImage: imageWithoutLabel, atPoint: .zero) : imageWithoutLabel
     }
 
-    func apply(_ appColor: AppColor, to image: CIImage) -> UIImage? {
+    func apply(_ appColor: AppColor, to image: CIImage, addLabel: Bool = false) -> UIImage? {
         let filter = FilterFactory.getFilter(for: appColor)
         
         filter.setValue(image, forKey: kCIInputImageKey)
@@ -51,7 +51,23 @@ struct FilterApplyer {
             return nil
         }
 
-        return TextToImageDrawer.addLabel(appColor: appColor, inImage: UIImage(cgImage: cgImage), atPoint: .zero)
+        let imageWithoutLabel = UIImage(cgImage: cgImage)
+        return addLabel ? TextToImageDrawer.addLabel(appColor: appColor, inImage: imageWithoutLabel, atPoint: .zero) : imageWithoutLabel
+    }
+
+    func emptyImage(_ appColor: AppColor, to image: CIImage) -> UIImage? {
+        let filter = FilterFactory.getFilter(for: appColor)
+
+        filter.setValue(image, forKey: kCIInputImageKey)
+        guard
+            let ciOutput = filter.outputImage,
+            let cgImage = self.context.createCGImage(ciOutput, from: image.extent)
+        else {
+            return nil
+        }
+
+        let imageWithoutLabel = UIImage(color: .clear, size: CGSize(width: cgImage.width, height: cgImage.height)) ?? UIImage()
+        return TextToImageDrawer.addLabel(appColor: appColor, inImage: imageWithoutLabel, atPoint: .zero) 
     }
 
 }

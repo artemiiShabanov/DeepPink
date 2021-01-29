@@ -25,6 +25,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>deep.otf</string>
+		<string>3602-chonk-app.otf</string>
+		<string>PolandCannedIntoFuture-OxE3.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

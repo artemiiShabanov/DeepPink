@@ -85,7 +85,7 @@ struct CameraView: View {
         .edgesIgnoringSafeArea(.all)
         .onAppear {
             appeared = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 withAnimation(.easeOut(duration: 1)) {
                     shown = true
                 }
