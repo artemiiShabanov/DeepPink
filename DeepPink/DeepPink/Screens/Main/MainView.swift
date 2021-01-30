@@ -25,10 +25,11 @@ struct MainView: View {
     // MARK: - AppStorage
 
     @AppStorage("currentColor") var currentColor = AppColor.deeppink
+    @AppStorage("showAllFilters") var showAllFilters = false
 
     // MARK: - State
 
-    @State private var isSavePermissionDenied = false
+    @State private var showSettings = false
     @State private var alert: AlertType?
 
     // MARK: - View
@@ -58,10 +59,14 @@ struct MainView: View {
                         .rotationEffect(.init(degrees: 90), anchor: .leading)
                         .padding(.horizontal, 50)
                         .animation(.spring())
+                        .onTapGesture(count: 5, perform: {
+                            showSettings = true
+                        })
                     Spacer()
                 }
                 Spacer()
-                ColorsView(colors: AppColor.allCases, currentColor: $currentColor)
+                ColorsView(colors: showAllFilters ? AppColor.allCases : AppColor.availableCases,
+                           currentColor: $currentColor)
                     .opacity(0.6)
                     .padding(.bottom, SafeArea.shared.bottom + 10)
             }
@@ -96,6 +101,9 @@ struct MainView: View {
                 return savePermissionDeniedAlert
             }
         }
+        .sheet(isPresented: $showSettings, content: {
+            SettingsView()
+        })
     }
 }
 

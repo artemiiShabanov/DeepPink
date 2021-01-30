@@ -19,6 +19,10 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
 
     // MARK: - Computed properties
 
+    static var availableCases: [AppColor] {
+        return [.deeppink, .blood]
+    }
+
     var id: String {
         return rawValue
     }

@@ -23,7 +23,8 @@
 		A4385C5F25C4CE2B002FBB30 /* deeppink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */; };
 		A4385C6225C4CE92002FBB30 /* ashgrey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */; };
 		A4385C6525C4D140002FBB30 /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6425C4D140002FBB30 /* SimpleFilter.swift */; };
-		A4385C6B25C549D3002FBB30 /* FlashToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6A25C549D3002FBB30 /* FlashToggleStyle.swift */; };
+		A4385C6B25C549D3002FBB30 /* RoundToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6A25C549D3002FBB30 /* RoundToggleStyle.swift */; };
+		A4385C6F25C584C6002FBB30 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6E25C584C6002FBB30 /* SettingsView.swift */; };
 		A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */; };
 		A478893E25C3ED310095578C /* SystemSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478893D25C3ED310095578C /* SystemSegues.swift */; };
 		A478894C25C3F8A60095578C /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478894B25C3F8A60095578C /* FilterFactory.swift */; };
@@ -67,7 +68,8 @@
 		A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deeppink.mp3; sourceTree = "<group>"; };
 		A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ashgrey.mp3; sourceTree = "<group>"; };
 		A4385C6425C4D140002FBB30 /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
-		A4385C6A25C549D3002FBB30 /* FlashToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashToggleStyle.swift; sourceTree = "<group>"; };
+		A4385C6A25C549D3002FBB30 /* RoundToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundToggleStyle.swift; sourceTree = "<group>"; };
+		A4385C6E25C584C6002FBB30 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterApplyer.swift; sourceTree = "<group>"; };
 		A478893D25C3ED310095578C /* SystemSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSegues.swift; sourceTree = "<group>"; };
 		A478894B25C3F8A60095578C /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 				A4385C5025C4C3D9002FBB30 /* blood.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		A4385C6D25C584AD002FBB30 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A4385C6E25C584C6002FBB30 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		A44B5E8E25C2D88100E42579 /* Image */ = {
@@ -208,7 +218,7 @@
 				A4C849A825C1CEB700524790 /* CameraButtonStyle.swift */,
 				A413393625C20663000B16E5 /* TakePictureButtonStyle.swift */,
 				A413393925C207A8000B16E5 /* RoundButtonStyle.swift */,
-				A4385C6A25C549D3002FBB30 /* FlashToggleStyle.swift */,
+				A4385C6A25C549D3002FBB30 /* RoundToggleStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -263,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				A488422425C1CB6600346382 /* MotherView */,
+				A4385C6D25C584AD002FBB30 /* Settings */,
 				A48841F525C1B98100346382 /* Main */,
 				A4C849A425C1CE2A00524790 /* Camera */,
 			);
@@ -430,6 +441,7 @@
 				A48841E425C1B78000346382 /* GenericClosure.swift in Sources */,
 				A488421D25C1C96500346382 /* ClipShapeModifier.swift in Sources */,
 				A478893E25C3ED310095578C /* SystemSegues.swift in Sources */,
+				A4385C6F25C584C6002FBB30 /* SettingsView.swift in Sources */,
 				A48841EC25C1B7C600346382 /* Color+string.swift in Sources */,
 				A48841E825C1B7A500346382 /* Color+assets.swift in Sources */,
 				A478894C25C3F8A60095578C /* FilterFactory.swift in Sources */,
@@ -438,7 +450,7 @@
 				A4C849A925C1CEB700524790 /* CameraButtonStyle.swift in Sources */,
 				A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */,
 				A48841FF25C1BB4B00346382 /* AppColor.swift in Sources */,
-				A4385C6B25C549D3002FBB30 /* FlashToggleStyle.swift in Sources */,
+				A4385C6B25C549D3002FBB30 /* RoundToggleStyle.swift in Sources */,
 				A413394025C20D9D000B16E5 /* CustomCameraController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

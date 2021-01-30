@@ -16,6 +16,7 @@ struct CameraView: View {
     // MARK: - AppStorage
 
     @AppStorage("currentColor") var currentColor = AppColor.deeppink
+    @AppStorage("addLabel") var addLabel = false
 
     // MARK: - Properties
 
@@ -89,7 +90,7 @@ struct CameraView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if shown {
-                CustomCameraRepresentable(didTapCapture: $didTapCapture, flash: $flash, appColor: currentColor)
+                CustomCameraRepresentable(didTapCapture: $didTapCapture, flash: $flash, appColor: currentColor, addLabel: addLabel)
                 bottomView
             } else {
                 placeholder

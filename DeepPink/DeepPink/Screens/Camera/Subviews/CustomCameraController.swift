@@ -23,8 +23,9 @@ class CustomCameraController: UIViewController {
 
     var delegate: AVCapturePhotoCaptureDelegate?
 
-    // AppColor
+    // App
     let appColor: AppColor
+    let addLabel: Bool
 
     // UI
     var filteredImageView = UIImageView()
@@ -45,8 +46,9 @@ class CustomCameraController: UIViewController {
 
     // Init
 
-    init(appColor: AppColor) {
+    init(appColor: AppColor, addLabel: Bool) {
         self.appColor = appColor
+        self.addLabel = addLabel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -171,11 +173,11 @@ extension CustomCameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
         let cameraImage = CIImage(cvImageBuffer: pixelBuffer!)
 
         DispatchQueue.main.async {
-            self.filteredImageView.image = FilterApplyer.shared.apply(self.appColor, to: cameraImage)
+            self.filteredImageView.image = FilterApplyer.shared.apply(self.appColor, to: cameraImage, addLabel: false)
             guard self.counter < 6 else { return }
             self.counter += 1
             if self.counter > 5  {
-                let emptyImage = FilterApplyer.shared.emptyImage(self.appColor, to: cameraImage)
+                let emptyImage = FilterApplyer.shared.emptyImage(self.appColor, to: cameraImage, addLabel: self.addLabel)
                 self.overlay.image = emptyImage
             }
         }

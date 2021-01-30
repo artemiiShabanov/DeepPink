@@ -48,8 +48,8 @@ struct GrainFilter: SimpleFilter {
             else {
                 return nil
         }
-        let whitenVector = CIVector(x: 0, y: 1, z: 0, w: 0)
-        let fineGrain = CIVector(x:0, y: 0.005, z:0, w:0)
+        let whitenVector = CIVector(x: -0.5, y: 0.5)
+        let fineGrain = CIVector.random(range: CGFloat(0.0004)...CGFloat(0.0004))
         let zeroVector = CIVector(x: 0, y: 0, z: 0, w: 0)
         guard
             let whiteningFilter = CIFilter(name:"CIColorMatrix",
@@ -74,10 +74,19 @@ struct GrainFilter: SimpleFilter {
                 kCIInputBackgroundImageKey: ciimage
             ]),
             let speckledImage = speckCompositor.outputImage
-            else {
-                return nil
+        else {
+            return nil
         }
-        return speckledImage
+        guard
+            let blur = CIFilter(name: "CIGaussianBlur", parameters: [
+                kCIInputImageKey: speckledImage,
+                "inputRadius": 0.1
+            ]),
+            let bluredNoise = blur.outputImage
+        else {
+            return nil
+        }
+        return bluredNoise
     }
 
 }
@@ -87,7 +96,7 @@ struct ScratchFilter: SimpleFilter {
     func apply(to ciimage: CIImage) -> CIImage? {
         let verticalScale = CGAffineTransform(scaleX: 1.5, y: 25)
         let transformedNoise = ciimage.transformed(by: verticalScale)
-        let darkenVector = CIVector(x: 5, y: 0, z: 0, w: 0)
+        let darkenVector = CIVector(x: 4, y: 0, z: 0, w: 0)
         let darkenBias = CIVector(x: 0, y: 1, z: 1, w: 1)
         let zeroVector = CIVector(x: 0, y: 0, z: 0, w: 0)
 
@@ -130,4 +139,13 @@ struct ScratchFilter: SimpleFilter {
         return oldFilmImage
     }
 
+}
+
+private extension CIVector {
+    static func random(range: ClosedRange<CGFloat>) -> CIVector {
+        return CIVector(x: CGFloat.random(in: range),
+                        y: CGFloat.random(in: range),
+                        z: CGFloat.random(in: range),
+                        w: CGFloat.random(in: range))
+    }
 }

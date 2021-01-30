@@ -7,6 +7,30 @@
 
 import SwiftUI
 
+struct RoundToggleStyle: ToggleStyle {
+
+    // MARK: - Properties
+
+    let color: Color
+    let imageName: String
+
+    func makeBody(configuration: Self.Configuration) -> some View {
+        ZStack {
+            Circle()
+                .foregroundColor(.white)
+                .opacity(configuration.isOn ? 0.3 : 0.05)
+            Circle()
+                .strokeBorder(lineWidth: 2)
+                .foregroundColor(.white)
+                .opacity(0.3)
+            Image(systemName: imageName).font(.title2).foregroundColor(color)
+        }.onTapGesture {
+            configuration.isOn.toggle()
+        }
+    }
+
+}
+
 struct FlashToggleStyle: ToggleStyle {
 
     // MARK: - Properties
