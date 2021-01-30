@@ -13,6 +13,7 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     // MARK: - Binding
 
     @Binding var didTapCapture: Bool
+    @Binding var flash: Bool
 
     // MARK: - Properties
 
@@ -33,8 +34,8 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ cameraViewController: CustomCameraController, context: Context) {
-        if self.didTapCapture {
-            cameraViewController.didTapRecord()
+        if didTapCapture {
+            cameraViewController.capture(flash: flash)
         }
     }
     

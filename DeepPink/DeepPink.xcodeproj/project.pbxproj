@@ -23,6 +23,7 @@
 		A4385C5F25C4CE2B002FBB30 /* deeppink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */; };
 		A4385C6225C4CE92002FBB30 /* ashgrey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */; };
 		A4385C6525C4D140002FBB30 /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6425C4D140002FBB30 /* SimpleFilter.swift */; };
+		A4385C6B25C549D3002FBB30 /* FlashToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6A25C549D3002FBB30 /* FlashToggleStyle.swift */; };
 		A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */; };
 		A478893E25C3ED310095578C /* SystemSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478893D25C3ED310095578C /* SystemSegues.swift */; };
 		A478894C25C3F8A60095578C /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478894B25C3F8A60095578C /* FilterFactory.swift */; };
@@ -66,6 +67,7 @@
 		A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deeppink.mp3; sourceTree = "<group>"; };
 		A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ashgrey.mp3; sourceTree = "<group>"; };
 		A4385C6425C4D140002FBB30 /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
+		A4385C6A25C549D3002FBB30 /* FlashToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashToggleStyle.swift; sourceTree = "<group>"; };
 		A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterApplyer.swift; sourceTree = "<group>"; };
 		A478893D25C3ED310095578C /* SystemSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSegues.swift; sourceTree = "<group>"; };
 		A478894B25C3F8A60095578C /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				A4C849A825C1CEB700524790 /* CameraButtonStyle.swift */,
 				A413393625C20663000B16E5 /* TakePictureButtonStyle.swift */,
 				A413393925C207A8000B16E5 /* RoundButtonStyle.swift */,
+				A4385C6A25C549D3002FBB30 /* FlashToggleStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				A4C849A925C1CEB700524790 /* CameraButtonStyle.swift in Sources */,
 				A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */,
 				A48841FF25C1BB4B00346382 /* AppColor.swift in Sources */,
+				A4385C6B25C549D3002FBB30 /* FlashToggleStyle.swift in Sources */,
 				A413394025C20D9D000B16E5 /* CustomCameraController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

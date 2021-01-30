@@ -21,6 +21,7 @@ struct CameraView: View {
 
     @State var didTapCapture: Bool = false
     @State var appeared: Bool = false
+    @State var flash: Bool = false
     @State var shown: Bool = false
 
     // MARK: - View
@@ -38,14 +39,7 @@ struct CameraView: View {
 
     var bottomView: some View {
         VStack {
-            Spacer()
             ZStack {
-                Button("") {
-                    didTapCapture = true
-                }
-                .buttonStyle(TakePictureButtonStyle(color: currentColor.color))
-                .frame(width: 80, height: 80)
-
                 HStack {
                     Spacer()
                     Button("") {
@@ -57,6 +51,18 @@ struct CameraView: View {
                     .frame(width: 60, height: 60)
                     .padding(.horizontal, 25)
                 }
+            }
+            .padding(.top, SafeArea.shared.top + 10)
+
+            Spacer()
+
+            ZStack {
+                Button("") {
+                    didTapCapture = true
+                }
+                .buttonStyle(TakePictureButtonStyle(color: currentColor.color))
+                .frame(width: 80, height: 80)
+
 
                 HStack {
                     Button("") {
@@ -67,6 +73,14 @@ struct CameraView: View {
                     .padding(.horizontal, 25)
                     Spacer()
                 }
+
+                HStack {
+                    Spacer()
+                    Toggle(isOn: $flash) { Text("Show welcome message") }
+                        .toggleStyle(FlashToggleStyle(color: currentColor.color))
+                        .frame(width: 60, height: 60)
+                        .padding(.horizontal, 25)
+                }
             }
             .padding(.bottom, SafeArea.shared.bottom + 10)
         }
@@ -75,7 +89,7 @@ struct CameraView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if shown {
-                CustomCameraRepresentable(didTapCapture: $didTapCapture, appColor: currentColor)
+                CustomCameraRepresentable(didTapCapture: $didTapCapture, flash: $flash, appColor: currentColor)
                 bottomView
             } else {
                 placeholder

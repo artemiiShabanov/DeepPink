@@ -33,9 +33,13 @@ class CustomCameraController: UIViewController {
 
     // MARK: - Methods
 
-    func didTapRecord() {
+    func capture(flash: Bool) {
         let settings = AVCapturePhotoSettings()
-        settings.flashMode = .auto
+        if flash {
+            settings.flashMode = .on
+        } else {
+            settings.flashMode = .off
+        }
         photoOutput.capturePhoto(with: settings, delegate: delegate!)
     }
 

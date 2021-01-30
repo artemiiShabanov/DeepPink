@@ -49,7 +49,7 @@ struct GrainFilter: SimpleFilter {
                 return nil
         }
         let whitenVector = CIVector(x: 0, y: 1, z: 0, w: 0)
-        let fineGrain = CIVector(x:0, y:0.005, z:0, w:0)
+        let fineGrain = CIVector(x:0, y: 0.005, z:0, w:0)
         let zeroVector = CIVector(x: 0, y: 0, z: 0, w: 0)
         guard
             let whiteningFilter = CIFilter(name:"CIColorMatrix",
@@ -87,7 +87,7 @@ struct ScratchFilter: SimpleFilter {
     func apply(to ciimage: CIImage) -> CIImage? {
         let verticalScale = CGAffineTransform(scaleX: 1.5, y: 25)
         let transformedNoise = ciimage.transformed(by: verticalScale)
-        let darkenVector = CIVector(x: 1, y: 0, z: 0, w: 0)
+        let darkenVector = CIVector(x: 5, y: 0, z: 0, w: 0)
         let darkenBias = CIVector(x: 0, y: 1, z: 1, w: 1)
         let zeroVector = CIVector(x: 0, y: 0, z: 0, w: 0)
 
