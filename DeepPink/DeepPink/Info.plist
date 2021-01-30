@@ -24,9 +24,10 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>deep.otf</string>
-		<string>3602-chonk-app.otf</string>
-		<string>PolandCannedIntoFuture-OxE3.ttf</string>
+		<string>YourDreamsDemoBrush-ZVWyq.ttf</string>
+		<string>Overscribble-g6o1.ttf</string>
+		<string>Sketsaramadhan-nRLAO.otf</string>
+		<string>Retrofunkscriptpersonaluse-v6XO.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

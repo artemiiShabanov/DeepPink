@@ -66,7 +66,7 @@ struct MainView: View {
                     .padding(.bottom, SafeArea.shared.bottom + 10)
             }
             Button("") {
-                Feedback.haptic(.heavy)
+                Feedback.shared.haptic(.heavy)
                 checkAccess() { resulf in
                     DispatchQueue.main.async {
                         switch resulf {

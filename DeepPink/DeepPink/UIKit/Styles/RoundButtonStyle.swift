@@ -19,7 +19,7 @@ struct RoundButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         ZStack {
             Circle()
-                .foregroundColor(.white).opacity(0.6)
+                .foregroundColor(.white).opacity(0.3)
             Image(systemName: imageName).font(.title2).foregroundColor(color)
         }
         .scaleEffect(configuration.isPressed ? 1.05 : 1)

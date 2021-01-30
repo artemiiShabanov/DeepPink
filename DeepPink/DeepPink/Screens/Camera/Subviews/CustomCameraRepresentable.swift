@@ -19,8 +19,8 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     let appColor: AppColor
     private let imageSaver: ImageSaver = {
         let tmp = ImageSaver()
-        tmp.onError = { _ in Feedback.haptic(.rigid) }
-        tmp.onSuccess = { Feedback.haptic(.soft) }
+        tmp.onError = { _ in Feedback.shared.haptic(.rigid) }
+        tmp.onSuccess = { Feedback.shared.haptic(.soft) }
         return tmp
     }()
 
@@ -54,6 +54,11 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
             if let imageData = photo.fileDataRepresentation(), let image = UIImage(data: imageData) {
                 parent.saveImage(image)
             }
+        }
+
+        func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+            AudioServicesDisposeSystemSoundID(1108)
+            Feedback.shared.sound(parent.appColor.sound)
         }
     }
 

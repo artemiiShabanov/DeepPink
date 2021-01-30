@@ -22,7 +22,7 @@ struct ColorsView: View {
                 Spacer(minLength: 20)
                 ForEach(colors) { color in
                     Button("") {
-                        Feedback.haptic(.light)
+                        Feedback.shared.haptic(.light)
                         currentColor = color
                     }
                     .frame(width: 40, height: 40)

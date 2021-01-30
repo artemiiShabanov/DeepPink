@@ -27,11 +27,9 @@ struct FilterApplyer {
 
         let minScale = min(resultSize.width / image.size.width, resultSize.height / image.size.height)
 
-        let ciInput = CIImage(image: image)?.transformed(by: .init(scaleX: minScale, y: minScale))
-        filter.setValue(ciInput, forKey: kCIInputImageKey)
-
         guard
-            let ciOutput = filter.outputImage,
+            let ciInput = CIImage(image: image)?.transformed(by: .init(scaleX: minScale, y: minScale)),
+            let ciOutput = filter.apply(to: ciInput),
             let cgImage = context.createCGImage(ciOutput, from: ciOutput.extent)
         else {
             return nil
@@ -42,10 +40,9 @@ struct FilterApplyer {
 
     func apply(_ appColor: AppColor, to image: CIImage, addLabel: Bool = false) -> UIImage? {
         let filter = FilterFactory.getFilter(for: appColor)
-        
-        filter.setValue(image, forKey: kCIInputImageKey)
+
         guard
-            let ciOutput = filter.outputImage,
+            let ciOutput = filter.apply(to: image),
             let cgImage = self.context.createCGImage(ciOutput, from: image.extent)
         else {
             return nil
@@ -56,15 +53,7 @@ struct FilterApplyer {
     }
 
     func emptyImage(_ appColor: AppColor, to image: CIImage) -> UIImage? {
-        let filter = FilterFactory.getFilter(for: appColor)
-
-        filter.setValue(image, forKey: kCIInputImageKey)
-        guard
-            let ciOutput = filter.outputImage,
-            let cgImage = self.context.createCGImage(ciOutput, from: image.extent)
-        else {
-            return nil
-        }
+        guard let cgImage = self.context.createCGImage(image, from: image.extent) else { return nil }
 
         let imageWithoutLabel = UIImage(color: .clear, size: CGSize(width: cgImage.width, height: cgImage.height)) ?? UIImage()
         return TextToImageDrawer.addLabel(appColor: appColor, inImage: imageWithoutLabel, atPoint: .zero) 
@@ -81,13 +70,20 @@ enum TextToImageDrawer {
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
 
+        let style = NSMutableParagraphStyle()
+        style.alignment = NSTextAlignment.center
+
         let textFontAttributes = [
-            NSAttributedString.Key.font: textFont,
-            NSAttributedString.Key.foregroundColor: textColor,
-            ] as [NSAttributedString.Key : Any]
+            .font: textFont,
+            .foregroundColor: textColor,
+            .paragraphStyle: style,
+            .baselineOffset: 100.0
+
+        ] as [NSAttributedString.Key : Any]
+
         image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
 
-        let rect = CGRect(origin: point, size: image.size)
+        let rect = CGRect(origin: CGPoint(x: 0, y: image.size.height / 2 - 30), size: image.size)
         appColor.name.draw(in: rect, withAttributes: textFontAttributes)
 
         let newImage = UIGraphicsGetImageFromCurrentImageContext()

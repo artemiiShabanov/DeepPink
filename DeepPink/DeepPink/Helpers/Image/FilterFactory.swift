@@ -9,16 +9,20 @@ import CoreImage
 
 enum FilterFactory {
 
-    static func getFilter(for color: AppColor) -> CIFilter {
+    static func getFilter(for color: AppColor) -> SimpleFilter {
         switch color {
-        case .ashgrey:
-            return CIFilter(name: "CIPhotoEffectFade")!
         case .deeppink:
-            return CIFilter(name: "CIPhotoEffectInstant")!
+            return FilterGroup(filters: [GrainFilter(), ScratchFilter()])
+        case .ashgrey:
+            return FilterGroup(filters: [GrainFilter(), ScratchFilter()])
         case .unmellow:
-            return CIFilter(name: "CIPhotoEffectMono")!
-        case .lime:
-            return CIFilter(name: "CIPhotoEffectNoir")!
+            return FilterGroup(filters: [GrainFilter(), ScratchFilter()])
+        case .blood:
+            return FilterGroup(filters: [
+                                CIFilter(name: "CIPhotoEffectFade")!,
+                                CIFilter(name: "CIPhotoEffectNoir")!,
+                                GrainFilter()
+            ])
         }
     }
     

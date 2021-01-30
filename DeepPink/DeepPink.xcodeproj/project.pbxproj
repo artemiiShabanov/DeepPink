@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A406A64125C1E34A00D50E27 /* deep.otf in Resources */ = {isa = PBXBuildFile; fileRef = A406A64025C1E34A00D50E27 /* deep.otf */; };
 		A413393725C20663000B16E5 /* TakePictureButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413393625C20663000B16E5 /* TakePictureButtonStyle.swift */; };
 		A413393A25C207A8000B16E5 /* RoundButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413393925C207A8000B16E5 /* RoundButtonStyle.swift */; };
 		A413393D25C20D78000B16E5 /* CustomCameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413393C25C20D78000B16E5 /* CustomCameraRepresentable.swift */; };
 		A413394025C20D9D000B16E5 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413393F25C20D9D000B16E5 /* CustomCameraController.swift */; };
 		A413394325C2122D000B16E5 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413394225C2122D000B16E5 /* ImageSaver.swift */; };
-		A41CB40B25C4847C004ABFBA /* 3602-chonk-app.otf in Resources */ = {isa = PBXBuildFile; fileRef = A41CB40A25C4847C004ABFBA /* 3602-chonk-app.otf */; };
-		A41CB40E25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A41CB40D25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf */; };
 		A41CB41125C48B55004ABFBA /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41CB41025C48B55004ABFBA /* UIImage.swift */; };
 		A41CB41525C493FF004ABFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41CB41425C493FF004ABFBA /* Assets.xcassets */; };
+		A4385C3B25C4B86A002FBB30 /* Overscribble-g6o1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4385C3A25C4B86A002FBB30 /* Overscribble-g6o1.ttf */; };
+		A4385C3E25C4B8E6002FBB30 /* Sketsaramadhan-nRLAO.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4385C3D25C4B8E6002FBB30 /* Sketsaramadhan-nRLAO.otf */; };
+		A4385C4825C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4385C4725C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf */; };
+		A4385C4C25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4385C4B25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf */; };
+		A4385C5125C4C3D9002FBB30 /* blood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5025C4C3D9002FBB30 /* blood.mp3 */; };
+		A4385C5C25C4CDCB002FBB30 /* unmellow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5B25C4CDCB002FBB30 /* unmellow.mp3 */; };
+		A4385C5F25C4CE2B002FBB30 /* deeppink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */; };
+		A4385C6225C4CE92002FBB30 /* ashgrey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */; };
+		A4385C6525C4D140002FBB30 /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6425C4D140002FBB30 /* SimpleFilter.swift */; };
 		A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */; };
 		A478893E25C3ED310095578C /* SystemSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478893D25C3ED310095578C /* SystemSegues.swift */; };
 		A478894C25C3F8A60095578C /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478894B25C3F8A60095578C /* FilterFactory.swift */; };
@@ -44,16 +50,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A406A64025C1E34A00D50E27 /* deep.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = deep.otf; sourceTree = "<group>"; };
 		A413393625C20663000B16E5 /* TakePictureButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureButtonStyle.swift; sourceTree = "<group>"; };
 		A413393925C207A8000B16E5 /* RoundButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonStyle.swift; sourceTree = "<group>"; };
 		A413393C25C20D78000B16E5 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
 		A413393F25C20D9D000B16E5 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		A413394225C2122D000B16E5 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
-		A41CB40A25C4847C004ABFBA /* 3602-chonk-app.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3602-chonk-app.otf"; sourceTree = "<group>"; };
-		A41CB40D25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PolandCannedIntoFuture-OxE3.ttf"; sourceTree = "<group>"; };
 		A41CB41025C48B55004ABFBA /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		A41CB41425C493FF004ABFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4385C3A25C4B86A002FBB30 /* Overscribble-g6o1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Overscribble-g6o1.ttf"; sourceTree = "<group>"; };
+		A4385C3D25C4B8E6002FBB30 /* Sketsaramadhan-nRLAO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sketsaramadhan-nRLAO.otf"; sourceTree = "<group>"; };
+		A4385C4725C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Retrofunkscriptpersonaluse-v6XO.otf"; sourceTree = "<group>"; };
+		A4385C4B25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YourDreamsDemoBrush-ZVWyq.ttf"; sourceTree = "<group>"; };
+		A4385C5025C4C3D9002FBB30 /* blood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blood.mp3; sourceTree = "<group>"; };
+		A4385C5B25C4CDCB002FBB30 /* unmellow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unmellow.mp3; sourceTree = "<group>"; };
+		A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deeppink.mp3; sourceTree = "<group>"; };
+		A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ashgrey.mp3; sourceTree = "<group>"; };
+		A4385C6425C4D140002FBB30 /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
 		A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterApplyer.swift; sourceTree = "<group>"; };
 		A478893D25C3ED310095578C /* SystemSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSegues.swift; sourceTree = "<group>"; };
 		A478894B25C3F8A60095578C /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; };
@@ -102,9 +114,21 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		A4385C4F25C4C3D0002FBB30 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */,
+				A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */,
+				A4385C5B25C4CDCB002FBB30 /* unmellow.mp3 */,
+				A4385C5025C4C3D9002FBB30 /* blood.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		A44B5E8E25C2D88100E42579 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				A4385C6425C4D140002FBB30 /* SimpleFilter.swift */,
 				A413394225C2122D000B16E5 /* ImageSaver.swift */,
 				A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */,
 				A478894B25C3F8A60095578C /* FilterFactory.swift */,
@@ -155,6 +179,7 @@
 		A48841D425C1B72900346382 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A4385C4F25C4C3D0002FBB30 /* Sounds */,
 				A4E8B4C925C1E273003971BC /* Fonts */,
 				A41CB41425C493FF004ABFBA /* Assets.xcassets */,
 				A48841D525C1B73800346382 /* Colors.xcassets */,
@@ -296,9 +321,10 @@
 		A4E8B4C925C1E273003971BC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A41CB40A25C4847C004ABFBA /* 3602-chonk-app.otf */,
-				A41CB40D25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf */,
-				A406A64025C1E34A00D50E27 /* deep.otf */,
+				A4385C4B25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf */,
+				A4385C4725C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf */,
+				A4385C3D25C4B8E6002FBB30 /* Sketsaramadhan-nRLAO.otf */,
+				A4385C3A25C4B86A002FBB30 /* Overscribble-g6o1.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -361,13 +387,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48841D625C1B73800346382 /* Colors.xcassets in Resources */,
+				A4385C6225C4CE92002FBB30 /* ashgrey.mp3 in Resources */,
 				A48841D925C1B74100346382 /* Images.xcassets in Resources */,
 				A48841CC25C1B71600346382 /* Preview Assets.xcassets in Resources */,
-				A41CB40E25C48580004ABFBA /* PolandCannedIntoFuture-OxE3.ttf in Resources */,
+				A4385C5C25C4CDCB002FBB30 /* unmellow.mp3 in Resources */,
+				A4385C5125C4C3D9002FBB30 /* blood.mp3 in Resources */,
+				A4385C4C25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf in Resources */,
+				A4385C5F25C4CE2B002FBB30 /* deeppink.mp3 in Resources */,
+				A4385C4825C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf in Resources */,
 				A48841F225C1B80B00346382 /* Launch Screen.storyboard in Resources */,
-				A406A64125C1E34A00D50E27 /* deep.otf in Resources */,
+				A4385C3B25C4B86A002FBB30 /* Overscribble-g6o1.ttf in Resources */,
 				A41CB41525C493FF004ABFBA /* Assets.xcassets in Resources */,
-				A41CB40B25C4847C004ABFBA /* 3602-chonk-app.otf in Resources */,
+				A4385C3E25C4B8E6002FBB30 /* Sketsaramadhan-nRLAO.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +422,7 @@
 				A4E8B4B125C1DFB0003971BC /* SafeArea.swift in Sources */,
 				A41CB41125C48B55004ABFBA /* UIImage.swift in Sources */,
 				A48841F725C1B98E00346382 /* MainView.swift in Sources */,
+				A4385C6525C4D140002FBB30 /* SimpleFilter.swift in Sources */,
 				A413393725C20663000B16E5 /* TakePictureButtonStyle.swift in Sources */,
 				A48841E425C1B78000346382 /* GenericClosure.swift in Sources */,
 				A488421D25C1C96500346382 /* ClipShapeModifier.swift in Sources */,
@@ -544,7 +576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ash.DeepPink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -566,7 +598,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ash.DeepPink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
