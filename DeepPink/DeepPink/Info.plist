@@ -19,9 +19,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>I needs camera access to take pictures</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>I need save to photo library access to save pictures</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>YourDreamsDemoBrush-ZVWyq.ttf</string>
@@ -59,9 +63,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>I needs camera access to take pictures</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>I need save to photo library access to save pictures</string>
 </dict>
 </plist>

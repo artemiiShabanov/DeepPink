@@ -141,11 +141,67 @@ struct ScratchFilter: SimpleFilter {
 
 }
 
-private extension CIVector {
-    static func random(range: ClosedRange<CGFloat>) -> CIVector {
-        return CIVector(x: CGFloat.random(in: range),
-                        y: CGFloat.random(in: range),
-                        z: CGFloat.random(in: range),
-                        w: CGFloat.random(in: range))
+struct FaceFilter: SimpleFilter {
+
+    func apply(to ciimage: CIImage) -> CIImage? {
+        guard
+            let pixelFilter = CIFilter(name:"CIPixellate", parameters: [
+                kCIInputImageKey: ciimage,
+                "inputScale": 30
+            ]),
+            let pixeleted = pixelFilter.outputImage
+            else {
+                return nil
+        }
+        let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+        let faceArray = detector?.features(in: ciimage, options: nil) ?? []
+
+        guard !faceArray.isEmpty else {
+            return nil
+        }
+
+        var maskImage: CIImage? = nil
+
+        for f in faceArray {
+            let centerX = (f.bounds.origin.x) + (f.bounds.size.width) / 2.0
+            let centerY = (f.bounds.origin.y) + (f.bounds.size.height) / 2.0
+            let radius: CGFloat = CGFloat(Double(min(f.bounds.size.width, f.bounds.size.height)) / 1.5)
+            guard
+                let radialGradient = CIFilter( name: "CIRadialGradient", parameters: [
+                    "inputRadius0": NSNumber(value: Float(radius)),
+                    "inputRadius1": NSNumber(value: Float(radius + 1.0)),
+                    "inputColor0": CIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0),
+                    "inputColor1": CIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0),
+                    kCIInputCenterKey: CIVector(x: centerX, y: centerY)
+                ])
+            else {
+                continue
+            }
+
+            guard let circleImage = radialGradient.value(forKey: kCIOutputImageKey) as? CIImage else { continue }
+            if let unwrappedMaskImage = maskImage {
+                maskImage = CIFilter(name: "CISourceOverCompositing", parameters: [
+                    kCIInputImageKey: circleImage,
+                    kCIInputBackgroundImageKey: unwrappedMaskImage
+                ])?.value(forKey: kCIOutputImageKey) as? CIImage
+            } else {
+                maskImage = circleImage
+            }
+        }
+
+        guard
+            let unwrappedMaskImage = maskImage,
+            let filter = CIFilter(name:"CIBlendWithMask", parameters: [
+                kCIInputImageKey: pixeleted,
+                "inputBackgroundImage": ciimage,
+                "inputMaskImage": unwrappedMaskImage
+            ]),
+            let image = filter.outputImage
+        else {
+            return nil
+        }
+        return image
     }
+
+
 }

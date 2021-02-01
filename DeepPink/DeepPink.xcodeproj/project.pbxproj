@@ -25,6 +25,8 @@
 		A4385C6525C4D140002FBB30 /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6425C4D140002FBB30 /* SimpleFilter.swift */; };
 		A4385C6B25C549D3002FBB30 /* RoundToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6A25C549D3002FBB30 /* RoundToggleStyle.swift */; };
 		A4385C6F25C584C6002FBB30 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6E25C584C6002FBB30 /* SettingsView.swift */; };
+		A4385C7425C59533002FBB30 /* VolumeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C7325C59533002FBB30 /* VolumeListener.swift */; };
+		A4385C7725C59B29002FBB30 /* CIVector+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C7625C59B29002FBB30 /* CIVector+random.swift */; };
 		A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */; };
 		A478893E25C3ED310095578C /* SystemSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478893D25C3ED310095578C /* SystemSegues.swift */; };
 		A478894C25C3F8A60095578C /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478894B25C3F8A60095578C /* FilterFactory.swift */; };
@@ -70,6 +72,8 @@
 		A4385C6425C4D140002FBB30 /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
 		A4385C6A25C549D3002FBB30 /* RoundToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundToggleStyle.swift; sourceTree = "<group>"; };
 		A4385C6E25C584C6002FBB30 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A4385C7325C59533002FBB30 /* VolumeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeListener.swift; sourceTree = "<group>"; };
+		A4385C7625C59B29002FBB30 /* CIVector+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIVector+random.swift"; sourceTree = "<group>"; };
 		A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterApplyer.swift; sourceTree = "<group>"; };
 		A478893D25C3ED310095578C /* SystemSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSegues.swift; sourceTree = "<group>"; };
 		A478894B25C3F8A60095578C /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 				A48841E325C1B78000346382 /* GenericClosure.swift */,
 				A4E8B4B025C1DFB0003971BC /* SafeArea.swift */,
 				A478893D25C3ED310095578C /* SystemSegues.swift */,
+				A4385C7325C59533002FBB30 /* VolumeListener.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				A48841EB25C1B7C600346382 /* Color+string.swift */,
 				A488421F25C1C98300346382 /* AnyTransition+iris.swift */,
 				A41CB41025C48B55004ABFBA /* UIImage.swift */,
+				A4385C7625C59B29002FBB30 /* CIVector+random.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -449,7 +455,9 @@
 				A48841E125C1B77200346382 /* Feedback.swift in Sources */,
 				A4C849A925C1CEB700524790 /* CameraButtonStyle.swift in Sources */,
 				A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */,
+				A4385C7725C59B29002FBB30 /* CIVector+random.swift in Sources */,
 				A48841FF25C1BB4B00346382 /* AppColor.swift in Sources */,
+				A4385C7425C59533002FBB30 /* VolumeListener.swift in Sources */,
 				A4385C6B25C549D3002FBB30 /* RoundToggleStyle.swift in Sources */,
 				A413394025C20D9D000B16E5 /* CustomCameraController.swift in Sources */,
 			);
@@ -580,6 +588,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"DeepPink/Preview Content\"";
 				DEVELOPMENT_TEAM = 9JH2U4SKKP;
 				ENABLE_PREVIEWS = YES;
@@ -602,6 +611,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"DeepPink/Preview Content\"";
 				DEVELOPMENT_TEAM = 9JH2U4SKKP;
 				ENABLE_PREVIEWS = YES;

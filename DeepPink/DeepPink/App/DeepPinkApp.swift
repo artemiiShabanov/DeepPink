@@ -11,12 +11,16 @@ import SwiftUI
 struct DeepPinkApp: App {
 
     @StateObject var viewRouter = ViewRouter()
+    var volumeListener = VolumeListener.shared
 
     var body: some Scene {
         WindowGroup {
             MotherView()
                 .environmentObject(viewRouter)
                 .statusBar(hidden: true)
+                .onAppear(perform: {
+                    volumeListener.start()
+                })
         }
     }
 

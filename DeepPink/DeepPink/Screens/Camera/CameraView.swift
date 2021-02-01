@@ -16,11 +16,11 @@ struct CameraView: View {
     // MARK: - AppStorage
 
     @AppStorage("currentColor") var currentColor = AppColor.deeppink
-    @AppStorage("addLabel") var addLabel = false
+    @AppStorage("addLabel") var addLabel = true
 
-    // MARK: - Properties
+    // MARK: - State
 
-    @State var didTapCapture: Bool = false
+    @StateObject private var cameraViewModel = CameraViewModel()
     @State var appeared: Bool = false
     @State var flash: Bool = false
     @State var shown: Bool = false
@@ -59,7 +59,7 @@ struct CameraView: View {
 
             ZStack {
                 Button("") {
-                    didTapCapture = true
+                    cameraViewModel.didTapCapture = true
                 }
                 .buttonStyle(TakePictureButtonStyle(color: currentColor.color))
                 .frame(width: 80, height: 80)
@@ -90,7 +90,7 @@ struct CameraView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if shown {
-                CustomCameraRepresentable(didTapCapture: $didTapCapture, flash: $flash, appColor: currentColor, addLabel: addLabel)
+                CustomCameraRepresentable(didTapCapture: $cameraViewModel.didTapCapture, flash: $flash, appColor: currentColor, addLabel: addLabel)
                 bottomView
             } else {
                 placeholder
@@ -99,6 +99,7 @@ struct CameraView: View {
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
         .onAppear {
+            cameraViewModel.subscriveOnNotifications()
             appeared = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 withAnimation(.easeOut(duration: 1)) {
@@ -106,6 +107,24 @@ struct CameraView: View {
                 }
             }
         }
+    }
+
+}
+
+// MARK: - View Model
+
+private class CameraViewModel: ObservableObject {
+
+    @Published var didTapCapture: Bool = false
+
+    func subscriveOnNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.userInteractedWithVolume),
+                                               name: NSNotification.Name(rawValue: "volumeListenerUserDidInteractWithVolume"), object: nil)
+    }
+
+    @objc
+    func userInteractedWithVolume() {
+        didTapCapture = true
     }
 
 }
