@@ -6,6 +6,7 @@
 //
 
 import CoreImage
+import UIKit
 
 enum FilterFactory {
 
@@ -14,35 +15,40 @@ enum FilterFactory {
         case .deeppink:
             return FilterGroup(filters: [
                 CIFilter(name: "CIColorClamp",
-                         parameters: ["inputMinComponents": CIVector(x: 0.1, y: 0.1, z: 0.1, w: 0.1),
-                                      "inputMaxComponents": CIVector(x: 0.9, y: 0.9, z: 0.9, w: 0.9)])!,
+                         parameters: ["inputMinComponents": CIVector(x: 0.07, y: 0.07, z: 0.07, w: 0.07),
+                                      "inputMaxComponents": CIVector(x: 0.95, y: 0.95, z: 0.95, w: 0.95)])!,
                 CIFilter(name: "CIPhotoEffectNoir")!,
                 GrainFilter(),
                 CIFilter(name: "CIColorMonochrome",
-                         parameters: ["inputColor": CIColor(red: 255, green: 20 / 255, blue: 147 / 255),
-                                      "inputIntensity": 0.1])!,
+                         parameters: ["inputColor": CIColor(cgColor: UIColor(color.color).cgColor),
+                                      "inputIntensity": 0.2])!,
             ])
-        case .ashgrey:
+        case .lavender:
             return FilterGroup(filters: [
-                FaceFilter(),
-                CIFilter(name: "CIColorClamp",
-                         parameters: ["inputMinComponents": CIVector(x: 0.1, y: 0.1, z: 0.1, w: 0.1),
-                                      "inputMaxComponents": CIVector(x: 0.9, y: 0.9, z: 0.9, w: 0.9)])!,
-                CIFilter(name: "CISepiaTone", parameters: ["inputIntensity": 0.5])!,
-                GrainFilter()
-            ])
-        case .unmellow:
-            return FilterGroup(filters: [
-                CIFilter(name: "CIPhotoEffectTonal")!,
+                CIFilter(name: "CIPhotoEffectNoir")!,
+                CIFilter(name: "CIColorControls",
+                         parameters: ["inputContrast": NSNumber(0.8)])!,
+                GrainFilter(),
                 CIFilter(name: "CIColorMonochrome",
-                         parameters: ["inputColor": CIColor(red: 0, green: 90 / 255, blue: 200 / 255),
-                                      "inputIntensity": 0.3])!,
+                         parameters: ["inputColor": CIColor(cgColor: UIColor(color.color).cgColor),
+                                      "inputIntensity": 0.6])!,
+            ])
+        case .baby:
+            return FilterGroup(filters: [
+                CIFilter(name: "CIColorClamp",
+                         parameters: ["inputMinComponents": CIVector(x: 0.07, y: 0.07, z: 0.07, w: 0.07),
+                                      "inputMaxComponents": CIVector(x: 0.95, y: 0.95, z: 0.95, w: 0.95)])!,
+                CIFilter(name: "CIColorMonochrome",
+                         parameters: ["inputColor": CIColor(cgColor: UIColor.gray.cgColor),
+                                      "inputIntensity": 0.95])!,
                 GrainFilter()
             ])
         case .blood:
             return FilterGroup(filters: [
+                FaceFilter(),
                 CIFilter(name: "CIPhotoEffectNoir")!,
-                CIFilter(name: "CIPhotoEffectNoir")!
+                CIFilter(name: "CIPhotoEffectNoir")!,
+                GrainFilter()
             ])
         }
     }

@@ -13,14 +13,14 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
     // MARK: - Cases
 
     case deeppink
-    case ashgrey
-    case unmellow
+    case lavender
+    case baby
     case blood
 
     // MARK: - Computed properties
 
     static var availableCases: [AppColor] {
-        return [.deeppink, .blood]
+        return [.deeppink, .lavender, .blood]
     }
 
     var id: String {
@@ -31,10 +31,10 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
         switch self {
         case .deeppink:
             return Color.deeppink
-        case .ashgrey:
-            return Color.ashgrey
-        case .unmellow:
-            return Color.unmellow
+        case .lavender:
+            return Color.lavender
+        case .baby:
+            return Color.baby
         case .blood:
             return Color.blood
         }
@@ -44,10 +44,10 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
         switch self {
         case .deeppink:
             return "deeppink"
-        case .ashgrey:
-            return "ashgrey"
-        case .unmellow:
-            return "unmellow"
+        case .lavender:
+            return "lavender"
+        case .baby:
+            return "baby blue"
         case .blood:
             return "blood"
         }
@@ -57,10 +57,10 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
         switch self {
         case .deeppink:
             return .deeppink
-        case .ashgrey:
-            return .ashgrey
-        case .unmellow:
-            return .unmellow
+        case .lavender:
+            return .lavender
+        case .baby:
+            return .baby
         case .blood:
             return .blood
         }
@@ -70,9 +70,9 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
         switch self {
         case .deeppink:
             return UIFont(name: "RetrofunkScriptPersonalUse", size: size) ?? UIFont.systemFont(ofSize: size)
-        case .ashgrey:
+        case .lavender:
             return UIFont(name: "SketsaRamadhan", size: size) ?? UIFont.systemFont(ofSize: size)
-        case .unmellow:
+        case .baby:
             return UIFont(name: "OverScribble", size: size) ?? UIFont.systemFont(ofSize: size)
         case .blood:
             return UIFont(name: "YourDreamsDEMO-Brush", size: size) ?? UIFont.systemFont(ofSize: size)
@@ -83,9 +83,9 @@ enum AppColor: String, Identifiable, CaseIterable, RawRepresentable {
         switch self {
         case .deeppink:
             return Font.custom("RetrofunkScriptPersonalUse", size: size)
-        case .ashgrey:
+        case .lavender:
             return Font.custom("SketsaRamadhan", size: size)
-        case .unmellow:
+        case .baby:
             return Font.custom("OverScribble", size: size)
         case .blood:
             return Font.custom("YourDreamsDEMO-Brush", size: size)

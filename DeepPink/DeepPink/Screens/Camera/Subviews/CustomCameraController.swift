@@ -174,9 +174,9 @@ extension CustomCameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
 
         DispatchQueue.main.async {
             self.filteredImageView.image = FilterApplyer.shared.apply(self.appColor, to: cameraImage, addLabel: false)
-            guard self.counter < 6 else { return }
+            guard self.counter < 4 else { return }
             self.counter += 1
-            if self.counter > 5  {
+            if self.counter > 3  {
                 let emptyImage = FilterApplyer.shared.emptyImage(self.appColor, to: cameraImage, addLabel: self.addLabel)
                 self.overlay.image = emptyImage
             }

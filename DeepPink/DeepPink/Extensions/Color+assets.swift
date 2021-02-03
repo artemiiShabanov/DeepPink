@@ -10,8 +10,8 @@ import SwiftUI
 extension Color {
 
     static let deeppink = Color("deeppink")
-    static let ashgrey = Color("ashgrey")
-    static let unmellow = Color("unmellow")
+    static let lavender = Color("lavender")
+    static let baby = Color("baby")
     static let blood = Color("blood")
 
 }

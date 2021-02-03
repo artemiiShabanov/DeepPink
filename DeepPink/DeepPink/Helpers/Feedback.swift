@@ -16,8 +16,8 @@ class Feedback {
 
     enum Sound: String {
         case deeppink = "deeppink"
-        case ashgrey = "ashgrey"
-        case unmellow = "unmellow"
+        case lavender = "lavender"
+        case baby = "baby"
         case blood = "blood"
     }
 

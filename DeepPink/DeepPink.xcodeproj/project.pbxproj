@@ -19,14 +19,15 @@
 		A4385C4825C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4385C4725C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf */; };
 		A4385C4C25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4385C4B25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf */; };
 		A4385C5125C4C3D9002FBB30 /* blood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5025C4C3D9002FBB30 /* blood.mp3 */; };
-		A4385C5C25C4CDCB002FBB30 /* unmellow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5B25C4CDCB002FBB30 /* unmellow.mp3 */; };
-		A4385C5F25C4CE2B002FBB30 /* deeppink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */; };
-		A4385C6225C4CE92002FBB30 /* ashgrey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */; };
+		A4385C5C25C4CDCB002FBB30 /* baby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385C5B25C4CDCB002FBB30 /* baby.mp3 */; };
 		A4385C6525C4D140002FBB30 /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6425C4D140002FBB30 /* SimpleFilter.swift */; };
 		A4385C6B25C549D3002FBB30 /* RoundToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6A25C549D3002FBB30 /* RoundToggleStyle.swift */; };
 		A4385C6F25C584C6002FBB30 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C6E25C584C6002FBB30 /* SettingsView.swift */; };
 		A4385C7425C59533002FBB30 /* VolumeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C7325C59533002FBB30 /* VolumeListener.swift */; };
 		A4385C7725C59B29002FBB30 /* CIVector+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385C7625C59B29002FBB30 /* CIVector+random.swift */; };
+		A4385D0B25CAA895002FBB30 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4385D0A25CAA895002FBB30 /* Debouncer.swift */; };
+		A4385D1125CAC38A002FBB30 /* lavender.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385D1025CAC38A002FBB30 /* lavender.mp3 */; };
+		A4385D1525CAC5B2002FBB30 /* deeppink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4385D1425CAC5B2002FBB30 /* deeppink.mp3 */; };
 		A44B5E8C25C2D87E00E42579 /* FilterApplyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */; };
 		A478893E25C3ED310095578C /* SystemSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478893D25C3ED310095578C /* SystemSegues.swift */; };
 		A478894C25C3F8A60095578C /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478894B25C3F8A60095578C /* FilterFactory.swift */; };
@@ -66,14 +67,15 @@
 		A4385C4725C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Retrofunkscriptpersonaluse-v6XO.otf"; sourceTree = "<group>"; };
 		A4385C4B25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YourDreamsDemoBrush-ZVWyq.ttf"; sourceTree = "<group>"; };
 		A4385C5025C4C3D9002FBB30 /* blood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blood.mp3; sourceTree = "<group>"; };
-		A4385C5B25C4CDCB002FBB30 /* unmellow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unmellow.mp3; sourceTree = "<group>"; };
-		A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deeppink.mp3; sourceTree = "<group>"; };
-		A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ashgrey.mp3; sourceTree = "<group>"; };
+		A4385C5B25C4CDCB002FBB30 /* baby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = baby.mp3; sourceTree = "<group>"; };
 		A4385C6425C4D140002FBB30 /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
 		A4385C6A25C549D3002FBB30 /* RoundToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundToggleStyle.swift; sourceTree = "<group>"; };
 		A4385C6E25C584C6002FBB30 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A4385C7325C59533002FBB30 /* VolumeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeListener.swift; sourceTree = "<group>"; };
 		A4385C7625C59B29002FBB30 /* CIVector+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIVector+random.swift"; sourceTree = "<group>"; };
+		A4385D0A25CAA895002FBB30 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
+		A4385D1025CAC38A002FBB30 /* lavender.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lavender.mp3; sourceTree = "<group>"; };
+		A4385D1425CAC5B2002FBB30 /* deeppink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deeppink.mp3; sourceTree = "<group>"; };
 		A44B5E8B25C2D87E00E42579 /* FilterApplyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterApplyer.swift; sourceTree = "<group>"; };
 		A478893D25C3ED310095578C /* SystemSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSegues.swift; sourceTree = "<group>"; };
 		A478894B25C3F8A60095578C /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; };
@@ -125,9 +127,9 @@
 		A4385C4F25C4C3D0002FBB30 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				A4385C5E25C4CE2B002FBB30 /* deeppink.mp3 */,
-				A4385C6125C4CE92002FBB30 /* ashgrey.mp3 */,
-				A4385C5B25C4CDCB002FBB30 /* unmellow.mp3 */,
+				A4385D1425CAC5B2002FBB30 /* deeppink.mp3 */,
+				A4385D1025CAC38A002FBB30 /* lavender.mp3 */,
+				A4385C5B25C4CDCB002FBB30 /* baby.mp3 */,
 				A4385C5025C4C3D9002FBB30 /* blood.mp3 */,
 			);
 			path = Sounds;
@@ -251,6 +253,7 @@
 				A4E8B4B025C1DFB0003971BC /* SafeArea.swift */,
 				A478893D25C3ED310095578C /* SystemSegues.swift */,
 				A4385C7325C59533002FBB30 /* VolumeListener.swift */,
+				A4385D0A25CAA895002FBB30 /* Debouncer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -407,15 +410,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48841D625C1B73800346382 /* Colors.xcassets in Resources */,
-				A4385C6225C4CE92002FBB30 /* ashgrey.mp3 in Resources */,
 				A48841D925C1B74100346382 /* Images.xcassets in Resources */,
 				A48841CC25C1B71600346382 /* Preview Assets.xcassets in Resources */,
-				A4385C5C25C4CDCB002FBB30 /* unmellow.mp3 in Resources */,
+				A4385C5C25C4CDCB002FBB30 /* baby.mp3 in Resources */,
 				A4385C5125C4C3D9002FBB30 /* blood.mp3 in Resources */,
 				A4385C4C25C4BD36002FBB30 /* YourDreamsDemoBrush-ZVWyq.ttf in Resources */,
-				A4385C5F25C4CE2B002FBB30 /* deeppink.mp3 in Resources */,
+				A4385D1125CAC38A002FBB30 /* lavender.mp3 in Resources */,
 				A4385C4825C4BB9D002FBB30 /* Retrofunkscriptpersonaluse-v6XO.otf in Resources */,
 				A48841F225C1B80B00346382 /* Launch Screen.storyboard in Resources */,
+				A4385D1525CAC5B2002FBB30 /* deeppink.mp3 in Resources */,
 				A4385C3B25C4B86A002FBB30 /* Overscribble-g6o1.ttf in Resources */,
 				A41CB41525C493FF004ABFBA /* Assets.xcassets in Resources */,
 				A4385C3E25C4B8E6002FBB30 /* Sketsaramadhan-nRLAO.otf in Resources */,
@@ -430,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A488422A25C1CBC300346382 /* ViewRouter.swift in Sources */,
+				A4385D0B25CAA895002FBB30 /* Debouncer.swift in Sources */,
 				A488421925C1C95100346382 /* ScaledCircle.swift in Sources */,
 				A413393D25C20D78000B16E5 /* CustomCameraRepresentable.swift in Sources */,
 				A488422625C1CB8300346382 /* MotherView.swift in Sources */,

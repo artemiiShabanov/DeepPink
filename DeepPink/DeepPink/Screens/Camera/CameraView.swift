@@ -99,9 +99,9 @@ struct CameraView: View {
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
         .onAppear {
-            cameraViewModel.subscriveOnNotifications()
+//            cameraViewModel.subscriveOnNotifications()
             appeared = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 withAnimation(.easeOut(duration: 1)) {
                     shown = true
                 }
